@@ -1,0 +1,48 @@
+{
+  "name": "signallab-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@stellar/stellar-sdk",
+      "blake-hash",
+      "bufferutil",
+      "protobufjs",
+      "sharp",
+      "tiny-secp256k1",
+      "unrs-resolver",
+      "usb",
+      "utf-8-validate"
+    ],
+    "supportedArchitectures": {
+      "os": [
+        "current",
+        "linux",
+        "win32"
+      ],
+      "cpu": [
+        "x64",
+        "arm64"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "build": "pnpm -r build --if-present",
+    "format": "prettier \"**/*.{js,jsx,ts,tsx,css,md,json}\" --write",
+    "secret-guard": "node scripts/secret-guard.mjs",
+    "deploy:devnet": "bash deploy_devnet.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.1.6",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.0"
+  }
+}

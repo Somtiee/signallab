@@ -1,0 +1,44 @@
+
+# Node / pnpm
+node_modules
+pnpm-lock.yaml
+.npmrc
+
+# Build artifacts
+.next
+dist
+coverage
+.vercel
+**/dist
+build
+.turbo
+
+# Editor
+.vscode
+.idea
+*.swp
+*.swo
+
+# Env files
+.env
+.env.*
+!.env.example
+apps/web/.env.local
+*.env
+
+# Anchor / Solana
+.anchor
+**/id.json
+**/*keypair*.json
+target/
+test-ledger/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# Misc
+.DS_Store
+Thumbs.db

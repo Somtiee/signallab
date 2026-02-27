@@ -1,0 +1,6 @@
+(Placeholder for Architecture Diagram)
+
+[ Web App (Next.js) ]  <-->  [ SignalLab SDK ]  <-->  [ Solana Blockchain (Anchor Program) ]
+         |                                                      |
+         v                                                      v
+[ IPFS/Arweave (Data) ]                                  [ Treasury & Governance ]

@@ -1,0 +1,19 @@
+[workspace]
+members = ["programs/research_registry"]
+
+[registry]
+url = "https://anchor.project-serum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[programs.localnet]
+research_registry = "Dcsc3iM5Q9hGPgQtaHHP7mBA3azaiW9rgcmguPuZhRzD"
+
+[programs.devnet]
+research_registry = "Dcsc3iM5Q9hGPgQtaHHP7mBA3azaiW9rgcmguPuZhRzD"
+
+[scripts]
+test = "pnpm test"
+

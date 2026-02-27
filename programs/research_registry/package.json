@@ -1,0 +1,21 @@
+{
+  "name": "research_registry",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.1"
+  },
+  "devDependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.3.0",
+    "chai": "^4.4.1",
+    "mocha": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
