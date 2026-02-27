@@ -19,7 +19,7 @@ import { useSubscription } from "@/hooks/useSubscription";
 // Simple SHA-256 helper
 async function sha256(message: string): Promise<Uint8Array> {
   const msgBuffer = new TextEncoder().encode(message);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer as unknown as BufferSource);
   return new Uint8Array(hashBuffer);
 }
 
