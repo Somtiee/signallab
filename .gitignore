@@ -1,8 +1,7 @@
 
 # Node / pnpm
 node_modules
-pnpm-lock.yaml
-.npmrc
+
 
 # Build artifacts
 .next

@@ -2,6 +2,11 @@
   "name": "signallab-monorepo",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "programs/*"
+  ],
   "pnpm": {
     "onlyBuiltDependencies": [
       "@stellar/stellar-sdk",
