@@ -15,8 +15,8 @@ const WalletMultiButton = dynamic(
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { href: '/feed', label: 'Feed' },
-  { href: '/social', label: 'Social' },
+  { href: '/feed', label: 'Radar' },
+  { href: '/social', label: 'Signal' },
   { href: '/docs', label: 'Docs' },
 ];
 
@@ -33,14 +33,14 @@ export const Navbar = () => {
         'backdrop-blur',
       )}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8 relative">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8 relative">
         <Link href="/" className="flex items-center gap-3 absolute left-0 top-1/2 -translate-y-1/2">
-          <div className="relative h-10 w-10 z-40">
+          <div className="relative h-14 w-14 z-40">
             <Image
               src="/brand/signalab-mark.png"
               alt="SignalLab logo"
               fill
-              sizes="40px"
+              sizes="64px"
               className="object-contain"
               priority
             />
