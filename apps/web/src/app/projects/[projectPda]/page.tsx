@@ -261,33 +261,33 @@ export default function ProjectPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 space-y-8">
       {/* Header */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-4">
-          <div>
-            <h1 className="text-4xl font-bold mb-2 text-white">{project.slug}</h1>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-              <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30">
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-4 md:p-8">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-4">
+          <div className="w-full md:w-auto">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-white break-all">{project.slug}</h1>
+            <div className="flex flex-wrap items-center gap-3 text-sm text-gray-400">
+              <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30 text-xs">
                 {shortenAddress(project.authority)}
               </span>
-              <span>Created: {formatDate(project.createdAt.toNumber())}</span>
-              <a href={project.metadataUri} target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 hover:underline flex items-center gap-1">
-                View Metadata ↗
+              <span className="text-xs">Created: {formatDate(project.createdAt.toNumber())}</span>
+              <a href={project.metadataUri} target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 hover:underline flex items-center gap-1 text-xs">
+                Metadata ↗
               </a>
             </div>
           </div>
           {isAuthority && (
-            <div className="flex gap-2 w-full md:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto mt-2 md:mt-0">
               {isPro ? (
                 <Link 
                   href={`/projects/${projectPda}/migrate`}
-                  className="bg-purple-600 hover:bg-purple-500 text-white border border-purple-400 px-4 py-2 rounded-lg text-sm font-medium transition flex-1 md:flex-none justify-center flex items-center gap-2 shadow-lg shadow-purple-900/20"
+                  className="bg-purple-600 hover:bg-purple-500 text-white border border-purple-400 px-6 py-3 md:py-2 rounded-lg text-base md:text-sm font-bold md:font-medium transition flex-1 md:flex-none justify-center flex items-center gap-2 shadow-lg shadow-purple-900/20 w-full md:w-auto"
                 >
                   <span>⚡</span> Migration Tool
                 </Link>
               ) : (
                 <button 
                   onClick={() => showToast("Upgrade to Pro to access Migration Tool", "error")}
-                  className="bg-gray-700 text-gray-400 px-4 py-2 rounded-lg text-sm font-medium transition flex-1 md:flex-none justify-center flex items-center gap-2 cursor-not-allowed opacity-50"
+                  className="bg-gray-700 text-gray-400 px-6 py-3 md:py-2 rounded-lg text-base md:text-sm font-medium transition flex-1 md:flex-none justify-center flex items-center gap-2 cursor-not-allowed opacity-50 w-full md:w-auto"
                   disabled
                 >
                   <span>🔒</span> Migration Tool (Pro)
@@ -295,13 +295,13 @@ export default function ProjectPage() {
               )}
               <button 
                 onClick={() => setShowAddDataset(true)}
-                className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium transition border border-white/10 flex-1 md:flex-none justify-center flex"
+                className="bg-white/10 hover:bg-white/20 px-6 py-3 md:py-2 rounded-lg text-base md:text-sm font-medium transition border border-white/10 flex-1 md:flex-none justify-center flex w-full md:w-auto"
               >
                 + Add Dataset
               </button>
               <button 
                 onClick={() => setShowCreatePoll(true)}
-                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium transition flex-1 md:flex-none justify-center flex text-white"
+                className="bg-blue-600 hover:bg-blue-700 px-6 py-3 md:py-2 rounded-lg text-base md:text-sm font-medium transition flex-1 md:flex-none justify-center flex text-white w-full md:w-auto"
               >
                 + Create Poll
               </button>

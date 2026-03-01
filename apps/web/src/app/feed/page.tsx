@@ -167,16 +167,16 @@ export default function FeedPage() {
 
   return (
     <div className="space-y-8 max-w-6xl mx-auto px-4 py-8">
-      <header className="flex items-center justify-between">
+      <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-white hover:text-purple-400 hover:drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300 cursor-default">Project Radar</h1>
           <p className="text-gray-400 mt-1">Discover decentralized research projects.</p>
         </div>
-        <div>
+        <div className="w-full sm:w-auto">
           <button
             onClick={() => setIsModalOpen(true)}
             disabled={!connected}
-            className={`px-4 py-2 rounded-lg font-medium transition-all ${
+            className={`px-6 py-3 sm:py-2 rounded-lg font-medium transition-all w-full sm:w-auto ${
               connected
                 ? "bg-purple-600 hover:bg-purple-700 text-white shadow-lg hover:shadow-purple-500/25"
                 : "bg-gray-700 text-gray-400 cursor-not-allowed"
