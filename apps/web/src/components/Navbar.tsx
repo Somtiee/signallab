@@ -53,14 +53,14 @@ export const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white p-2"
+          className="lg:hidden text-white p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 ml-auto">
+        <nav className="hidden lg:flex items-center gap-6 ml-auto">
           <ul className="flex items-center gap-6 text-sm font-medium">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -109,7 +109,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
           <ul className="flex flex-col gap-4 text-base font-medium text-center">
             {navItems.map((item) => (
               <li key={item.href}>

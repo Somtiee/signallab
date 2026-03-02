@@ -321,8 +321,10 @@ export default function ProjectPage() {
 
       {/* Mobile Sticky Action Bar */}
       {isAuthority && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-[#050505]/95 backdrop-blur-xl border-t border-white/10 z-50 animate-in slide-in-from-bottom-4 shadow-2xl">
-          <AdminActions mobile />
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-[100] border-t border-white/10 bg-black/95 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,0,0,0.5)] animate-in slide-in-from-bottom-4">
+          <div className="p-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
+            <AdminActions mobile />
+          </div>
         </div>
       )}
 
